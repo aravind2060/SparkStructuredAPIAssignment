@@ -51,10 +51,12 @@ def main(master_nodel_url,input_file_path, output_dir):
     write_to_file(popular_categories, os.path.join(output_dir, 'popular_categories'))
     write_to_file(high_value_customers, os.path.join(output_dir, 'high_value_customers'))
     write_to_file(low_value_customers, os.path.join(output_dir, 'low_value_customers'))
-
+    while True:
+        pass
+    spark.stop();
 if __name__ == "__main__":
     if len(sys.argv) != 3:
-        print("Usage: program.py <input_file_path> <output_directory>")
+        print("Usage: program.py <input_file_path> <output_directory> \n Ex : /spark/bin/spark-submit TransactionsAnalyze.py /data/input/transactions.csv /data/output/transactions")
         sys.exit(1)
     input_file_path = sys.argv[1]
     output_dir = sys.argv[2]

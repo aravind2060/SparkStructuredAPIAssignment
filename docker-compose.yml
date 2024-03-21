@@ -7,6 +7,7 @@ services:
     ports:
       - "8080:8080"  # Spark Master Web UI
       - "7077:7077"  # Spark Master communication port for Spark workers
+      - "4040:4040"  # for spark context viewing DAG
     environment:
       - INIT_DAEMON_STEP=setup_spark
     volumes:
